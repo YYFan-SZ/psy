@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Details - yfpsynav</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="fixed-header">
+        <div class="container">
+            <div class="logo">
+                <img src="image.png" alt="yfpsynav Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>yfpsynav</h1>
+                    <p class="translatable">Psychology Resource Discovery Platform</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search psychology resources..." class="translatable-placeholder" data-zh="搜索心理学资源..." data-en="Search psychology resources...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="index.html" class="back-home-btn translatable">Back to Home</a>
+                <div class="translate-btn">
+                    <button id="translate-toggle"><i class="fas fa-language"></i> 中文</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-spacer"></div>
+
+    <main>
+        <div class="container">
+            <section class="detail-container" id="detail-content">
+                <!-- 详情内容将通过JavaScript动态加载 -->
+                <div class="detail-loading translatable" data-zh="加载中..." data-en="Loading...">加载中...</div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 yfpsynav - <span class="translatable" data-zh="心理学资源导航平台" data-en="Psychology Resource Navigation Platform">心理学资源导航平台</span></p>
+        </div>
+    </footer>
+
+    <script src="detail.js"></script>
+</body>
+</html>

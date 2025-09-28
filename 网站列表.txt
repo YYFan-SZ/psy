@@ -1,0 +1,375 @@
+2.1 学习与教育
+📖 2.1.1 在线课程平台
+
+Coursera - Psychology
+👉 coursera.org/courses?query=psychology
+
+—— 国际心理学课程平台，涵盖认知、发展、临床、社会心理学等多个方向。
+
+edX - Psychology
+👉 edx.org/learn/psychology
+
+—— 世界顶尖大学开放课程，含认知科学、教育心理学、社会心理学。
+
+MIT OpenCourseWare - Brain & Cognitive Sciences
+👉 ocw.mit.edu/courses/brain-and-cognitive-sciences
+
+—— 麻省理工免费课程，侧重脑科学与认知心理学。
+
+Yale Open Courses - Introduction to Psychology
+👉 oyc.yale.edu/psychology/psyc-110
+
+—— 耶鲁大学「心理学导论」，公开课视频+讲义。
+
+Harvard Online - Psychology
+👉 pll.harvard.edu/subject/psychology
+
+—— 哈佛大学心理学与心理健康相关课程。
+
+Open Yale / UC Berkeley YouTube Channels
+👉 YouTube - UC Berkeley Psychology
+
+—— 免费心理学课程与讲座，适合自学。
+
+📘 2.1.2 经典教材（可获取电子版）
+
+OpenStax Psychology 2e（免费电子书）
+👉 openstax.org/details/books/psychology-2e
+
+—— 免费、开源心理学基础教材，涵盖心理学核心概念，适合入门。
+
+Noba Project - Free Psychology Textbook
+👉 nobaproject.com/textbooks
+
+—— 全球学者撰写的模块化教材，免费电子书（PDF/在线阅读）。
+
+Saylor Academy - Psychology Textbooks
+👉 learn.saylor.org/course/psych101
+
+—— 免费心理学课程与教材下载，涵盖心理学导论。
+
+APA Free E-Books & Resources
+👉 apa.org/pubs/books
+ （部分开放资源）
+—— 美国心理学会出版，部分电子版可免费下载。
+
+BCcampus OpenEd - Psychology Textbooks
+👉 open.bccampus.ca/find-open-textbooks/?subject=Psychology
+
+—— 加拿大开放教材库，收录多本心理学电子书。
+
+Internet Archive - Psychology Books
+👉 archive.org/details/texts?query=psychology
+
+—— 大量心理学教材与经典书籍的电子扫描本，可在线借阅或下载 PDF。
+
+📗 2.1.3 学术入门资源
+
+Simply Psychology
+👉 simplypsychology.org
+
+—— 心理学核心概念与实验，清晰易懂。
+
+Verywell Mind - Psychology Basics
+👉 verywellmind.com/psychology-4014660
+
+—— 面向大众的心理学入门科普。
+
+CrashCourse - Psychology (YouTube)
+👉 YouTube Playlist
+
+—— 生动的动画心理学视频课程，覆盖主要分支。
+
+Noba Project (入门文章)
+👉 nobaproject.com/modules
+
+—— 免费心理学入门模块文章，可替代教材使用。
+
+Open Learning Initiative (Carnegie Mellon) - Introduction to Psychology
+👉 oli.cmu.edu/courses/introduction-to-psychology/
+
+—— 免费互动课程，含教材+练习。
+
+Stanford Encyclopedia of Philosophy (SEP) - Psychology Related
+👉 plato.stanford.edu
+
+—— 心理学与哲学交叉主题的权威条目。
+
+
+
+2.2 工具与测评
+🧩 2.2.1 心理测验
+
+OpenPsychometrics
+👉 openpsychometrics.org
+
+—— 免费心理测验平台，提供大五人格、MBTI、智力测验等。
+
+Truity
+👉 truity.com
+
+—— 国际知名测评平台，涵盖 MBTI、九型人格、大五等。
+
+16Personalities
+👉 16personalities.com
+
+—— 全球最流行的 MBTI 风格测评，界面友好。
+
+Big Five Personality Test (IPIP-NEO)
+👉 ipip.ori.org
+
+—— 大五人格量表（IPIP-NEO），研究与教育常用。
+
+心理测评中心（中国科学院心理研究所）
+👉 psytest.cn
+
+—— 中文心理测评资源平台，含智力、人格、情绪量表。
+
+Queendom Tests
+👉 queendom.com/tests
+
+—— 大量心理学在线测验（IQ、EQ、人格、职业兴趣等）。
+
+Psychology Today Tests
+👉 psychologytoday.com/tests
+
+—— 心理学主题测验：人格、情绪、恋爱、压力等。
+
+🧪 2.2.2 实验工具
+
+PsyToolkit
+👉 psytoolkit.org
+
+—— 免费在线心理实验与问卷工具，广泛用于科研与教学。
+
+Inquisit by Millisecond
+👉 millisecond.com
+
+—— 专业心理实验软件，支持复杂反应时实验。
+
+PsychoPy
+👉 psychopy.org
+
+—— 免费开源实验设计工具，广泛用于心理学与神经科学。
+
+Gorilla Experiment Builder
+👉 gorilla.sc
+
+—— 在线实验平台，支持行为实验和认知任务。
+
+Lab.js
+👉 lab.js.org
+
+—— 开源网页实验工具，可在浏览器运行心理实验。
+
+Expyriment
+👉 expyriment.org
+
+—— Python 实验框架，适合行为科学研究。
+
+📊 2.2.3 数据分析软件
+
+SPSS
+👉 ibm.com/spss
+
+—— 最常用的心理学统计软件（商业版）。
+
+R Project
+👉 r-project.org
+
+—— 免费开源统计语言，心理学科研常用。
+
+JASP
+👉 jasp-stats.org
+
+—— 免费开源统计软件，专为心理学设计，界面类似 SPSS。
+
+Jamovi
+👉 jamovi.org
+
+—— 开源统计平台，简洁易用，兼容 R。
+
+G*Power
+👉 ps.uni-duesseldorf.de/gpower
+
+—— 样本量计算软件，心理学科研常用。
+
+MATLAB (Psychtoolbox)
+👉 psychtoolbox.org
+
+—— MATLAB 插件，心理学与神经科学实验工具。
+
+Zotero
+👉 zotero.org
+
+—— 免费文献管理软件，科研必备。
+
+
+
+2.3 心理学分支
+🔎 2.3.1 认知心理学 (Cognitive Psychology)
+
+Cognitive Science Society
+👉 cognitivesciencesociety.org
+
+—— 国际认知科学协会，跨学科研究。
+
+Psychonomic Society
+👉 psychonomic.org
+
+—— 认知与实验心理学顶级学会。
+
+MIT Department of Brain & Cognitive Sciences
+👉 bcs.mit.edu
+
+—— MIT 认知与脑科学研究中心。
+
+Max Planck Institute for Human Cognitive and Brain Sciences
+👉 cbs.mpg.de
+
+—— 德国马普学会，认知神经科学权威研究机构。
+
+Journal of Experimental Psychology (APA)
+👉 apa.org/pubs/journals/xge
+
+—— 实验与认知心理学核心期刊。
+
+👶 2.3.2 发展心理学 (Developmental Psychology)
+
+Society for Research in Child Development (SRCD)
+👉 srcd.org
+
+—— 儿童发展研究国际学会。
+
+APA Division 7: Developmental Psychology
+👉 apadivisions.org/division-7
+
+—— 发展心理学专业分部。
+
+Zero to Three
+👉 zerotothree.org
+
+—— 婴幼儿发展研究与干预。
+
+International Society for the Study of Behavioural Development (ISSBD)
+👉 issbd.org
+
+—— 全球发展心理学研究者组织。
+
+Child Development Journal
+👉 srcd.onlinelibrary.wiley.com
+
+—— 发展心理学顶级期刊。
+
+🩺 2.3.3 临床与咨询心理学 (Clinical & Counseling Psychology)
+
+APA Division 12: Society of Clinical Psychology
+👉 division12.org
+
+—— 临床心理学学会。
+
+APA Division 17: Society of Counseling Psychology
+👉 societyofcounselingpsychology.org
+
+—— 咨询心理学学会。
+
+Society for Psychotherapy Research (SPR)
+👉 sprweb.org
+
+—— 心理治疗研究学会。
+
+International Society for Traumatic Stress Studies (ISTSS)
+👉 istss.org
+
+—— 创伤与 PTSD 国际学会。
+
+Journal of Consulting and Clinical Psychology (APA)
+👉 apa.org/pubs/journals/ccp
+
+—— 临床与咨询心理学顶刊。
+
+👥 2.3.4 社会心理学 (Social Psychology)
+
+Society for Personality and Social Psychology (SPSP)
+👉 spsp.org
+
+—— 全球最大的人格与社会心理学组织。
+
+European Association of Social Psychology (EASP)
+👉 easp.eu
+
+—— 欧洲社会心理学学会。
+
+International Association for Relationship Research (IARR)
+👉 relationshipresearch.org
+
+—— 关系与社会互动研究学会。
+
+Society of Experimental Social Psychology (SESP)
+👉 sesp.org
+
+—— 实验社会心理学学会。
+
+Journal of Personality and Social Psychology (APA)
+👉 apa.org/pubs/journals/psp
+
+—— 社会心理学领域最具影响力的期刊之一。
+
+🎓 2.3.5 教育心理学 (Educational Psychology)
+
+American Educational Research Association (AERA)
+👉 aera.net
+
+—— 教育与心理学研究核心组织。
+
+APA Division 15: Educational Psychology
+👉 apadivisions.org/division-15
+
+—— 教育心理学学会。
+
+European Association for Research on Learning and Instruction (EARLI)
+👉 earli.org
+
+—— 欧洲教育心理学与学习科学协会。
+
+International Society of the Learning Sciences (ISLS)
+👉 isls.org
+
+—— 学习科学与教育心理学国际学会。
+
+Educational Psychologist Journal
+👉 tandfonline.com/toc/hedp20/current
+
+—— 教育心理学顶级期刊。
+
+🧬 2.3.6 神经科学与脑科学 (Neuroscience & Brain Science)
+
+Society for Neuroscience (SfN)
+👉 sfn.org
+
+—— 全球最大神经科学学会。
+
+Cognitive Neuroscience Society (CNS)
+👉 cogneurosociety.org
+
+—— 认知神经科学领域顶级组织。
+
+Human Brain Project (HBP)
+👉 humanbrainproject.eu
+
+—— 欧盟脑科学研究旗舰项目。
+
+Allen Brain Atlas (Allen Institute for Brain Science)
+👉 portal.brain-map.org
+
+—— 开放神经科学数据库。
+
+NeuroScience Information Framework (NIF)
+👉 neuinfo.org
+
+—— 神经科学资源与数据库整合平台。
+
+Nature Neuroscience
+👉 nature.com/neuro
+
+—— 国际顶尖神经科学期刊。

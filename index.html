@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yfpsynav - 心理学导航</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="fixed-header">
+        <div class="container">
+            <div class="logo">
+                <img src="image.png" alt="yfpsynav Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>yfpsynav</h1>
+                    <p class="translatable">Psychology Resource Discovery Platform</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search psychology resources..." class="translatable-placeholder" data-zh="搜索心理学资源..." data-en="Search psychology resources...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="translate-btn">
+                    <button id="translate-toggle"><i class="fas fa-language"></i> 中文</button>
+                </div>
+                <div class="favorites-toggle-btn">
+                    <button id="favorites-toggle" class="translatable" data-zh="我的收藏" data-en="My Favorites"><i class="fas fa-star"></i> <span>My Favorites</span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-spacer"></div>
+
+    <!-- 收藏栏 -->
+    <div class="favorites-bar" id="favorites-bar" style="display: none;">
+        <div class="container">
+            <div class="favorites-container" id="favorites-container">
+                <!-- 收藏的资源将在这里动态显示 -->
+                <p class="empty-favorites translatable" data-zh="暂无收藏内容" data-en="No favorites yet">No favorites yet</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="#" data-category="2.1" class="translatable" data-zh="学习与教育" data-en="Learning & Education">学习与教育</a></li>
+                <li><a href="#" data-category="2.2" class="translatable" data-zh="工具与测评" data-en="Tools & Assessment">工具与测评</a></li>
+                <li><a href="#" data-category="2.3" class="translatable" data-zh="心理学分支" data-en="Psychology Branches">心理学分支</a></li>
+                <li><a href="#" data-category="2.4" class="translatable" data-zh="社区与交流" data-en="Community & Exchange">社区与交流</a></li>
+                <li><a href="#" data-category="2.5" class="translatable" data-zh="实用服务" data-en="Practical Services">实用服务</a></li>
+                <li><a href="#" data-category="2.6" class="translatable" data-zh="科研与数据" data-en="Research & Data">科研与数据</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="subcategory-nav">
+        <div class="container">
+            <ul id="subcategory-list">
+                <li class="active"><a href="#" data-subcategory="2.1.1" class="translatable" data-zh="在线课程" data-en="Online Courses">在线课程</a></li>
+                <li><a href="#" data-subcategory="2.1.2" class="translatable" data-zh="经典书籍与教材推荐" data-en="Classic Books & Textbooks">经典书籍与教材推荐</a></li>
+                <li><a href="#" data-subcategory="2.1.3" class="translatable" data-zh="学术入门资源" data-en="Academic Starter Resources">学术入门资源</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section class="resource-grid" id="resource-container">
+                <!-- 2.1.1 在线课程平台 -->
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.1">
+                    <div class="card-logo">
+                        <img src="logo/coursera.png" alt="Coursera Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Coursera - Psychology" data-en="Coursera - Psychology">Coursera - Psychology</h3>
+                        <p class="translatable" data-zh="国际心理学课程平台，涵盖认知、发展、临床、社会心理学等多个方向。" data-en="International psychology course platform covering cognitive, developmental, clinical, social psychology and more.">国际心理学课程平台，涵盖认知、发展、临床、社会心理学等多个方向。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="在线课程" data-en="Online Courses">在线课程</span>
+                            <span class="translatable" data-zh="多领域" data-en="Multiple Fields">多领域</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=coursera" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="coursera"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.1">
+                    <div class="card-logo">
+                        <img src="logo/edX.png" alt="edX Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="edX - Psychology" data-en="edX - Psychology">edX - Psychology</h3>
+                        <p class="translatable" data-zh="世界顶尖大学开放课程，含认知科学、教育心理学、社会心理学。" data-en="Open courses from world-class universities, including cognitive science, educational psychology, and social psychology.">世界顶尖大学开放课程，含认知科学、教育心理学、社会心理学。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="在线课程" data-en="Online Courses">在线课程</span>
+                            <span class="translatable" data-zh="名校课程" data-en="Prestigious University Courses">名校课程</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=edx" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="edx"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.1">
+                    <div class="card-logo">
+                        <img src="logo/mit.png" alt="MIT OpenCourseWare Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="MIT OpenCourseWare - Psychology" data-en="MIT OpenCourseWare - Psychology">MIT OpenCourseWare - Psychology</h3>
+                        <p class="translatable" data-zh="麻省理工学院开放课程，提供认知科学、神经科学等领域的免费学习资源。" data-en="MIT open courses providing free learning resources in cognitive science, neuroscience and other fields.">麻省理工学院开放课程，提供认知科学、神经科学等领域的免费学习资源。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="开放教育资源" data-en="Open Educational Resources">开放教育资源</span>
+                            <span class="translatable" data-zh="认知科学" data-en="Cognitive Science">认知科学</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=mit" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="mit"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.1">
+                    <div class="card-logo">
+                        <img src="logo/yale.png" alt="Yale University Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="耶鲁大学开放课程" data-en="Yale University Open Courses">Yale University Open Courses</h3>
+                        <p class="translatable" data-zh="耶鲁大学开放课程，包含心理学导论等经典课程，由知名教授讲授。" data-en="Yale University open courses, including classic courses such as Introduction to Psychology, taught by renowned professors.">Yale University open courses, including classic courses such as Introduction to Psychology, taught by renowned professors.</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="开放教育资源" data-en="Open Educational Resources">Open Educational Resources</span>
+                            <span class="translatable" data-zh="视频讲座" data-en="Video Lectures">Video Lectures</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=yale" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="yale"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.1">
+                    <div class="card-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Harvard_University_logo.svg/320px-Harvard_University_logo.svg.png" alt="Harvard University Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="哈佛大学在线课程" data-en="Harvard University Online Courses">Harvard University Online Courses</h3>
+                        <p class="translatable" data-zh="哈佛大学在线课程，提供认知心理学、积极心理学等专业课程。" data-en="Harvard University online courses offering professional courses in cognitive psychology, positive psychology, and more.">Harvard University online courses offering professional courses in cognitive psychology, positive psychology, and more.</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="名校课程" data-en="Prestigious University Courses">Prestigious University Courses</span>
+                            <span class="translatable" data-zh="积极心理学" data-en="Positive Psychology">Positive Psychology</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=harvard" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="harvard"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.1">
+                    <div class="card-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="UC Berkeley Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="UC Berkeley Online Learning" data-en="UC Berkeley Online Learning">UC Berkeley Online Learning</h3>
+                        <p class="translatable" data-zh="加州大学伯克利分校在线学习平台，提供心理学证书项目和专业课程。" data-en="UC Berkeley online learning platform offering psychology certificate programs and professional courses.">加州大学伯克利分校在线学习平台，提供心理学证书项目和专业课程。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="证书项目" data-en="Certificate Programs">证书项目</span>
+                            <span class="translatable" data-zh="应用心理学" data-en="Applied Psychology">应用心理学</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=berkeley" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="berkeley"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.1.2 经典教材（可获取电子版） -->
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.2">
+                    <div class="card-logo">
+                        <img src="https://openstax.org/dist/images/logo.svg" alt="OpenStax Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="OpenStax Psychology 2e（免费电子书）" data-en="OpenStax Psychology 2e (Free E-book)">OpenStax Psychology 2e（免费电子书）</h3>
+                        <p class="translatable" data-zh="免费、开源心理学基础教材，涵盖心理学核心概念，适合入门。" data-en="Free, open-source basic psychology textbook covering core concepts, suitable for beginners.">免费、开源心理学基础教材，涵盖心理学核心概念，适合入门。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="免费电子书" data-en="Free E-book">免费电子书</span>
+                            <span class="translatable" data-zh="入门教材" data-en="Beginner Textbook">入门教材</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=openstax" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="openstax"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.1.3 学术入门资源 -->
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.3">
+                    <div class="card-logo">
+                        <img src="logo/simplypsychology.png" alt="Simply Psychology Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Simply Psychology" data-en="Simply Psychology">Simply Psychology</h3>
+                        <p class="translatable" data-zh="心理学核心概念与实验，清晰易懂。" data-en="Core psychology concepts and experiments, clear and easy to understand.">心理学核心概念与实验，清晰易懂。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="入门资源" data-en="Starter Resource">入门资源</span>
+                            <span class="translatable" data-zh="核心概念" data-en="Core Concepts">核心概念</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=simplypsychology" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="simplypsychology"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.3">
+                    <div class="card-logo">
+                        <img src="logo/verywellmind.png" alt="Verywell Mind Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Verywell Mind - Psychology Basics" data-en="Verywell Mind - Psychology Basics">Verywell Mind - Psychology Basics</h3>
+                        <p class="translatable" data-zh="面向大众的心理学入门科普。" data-en="Psychology basics for the general public.">面向大众的心理学入门科普。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="科普资源" data-en="Popular Science">科普资源</span>
+                            <span class="translatable" data-zh="心理健康" data-en="Mental Health">心理健康</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=verywellmind" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="verywellmind"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.3">
+                    <div class="card-logo">
+                        <img src="logo/crashcourse.png" alt="CrashCourse Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="CrashCourse - Psychology (YouTube)" data-en="CrashCourse - Psychology (YouTube)">CrashCourse - Psychology (YouTube)</h3>
+                        <p class="translatable" data-zh="生动的动画心理学视频课程，覆盖主要分支。" data-en="Vivid animated psychology video courses covering major branches.">生动的动画心理学视频课程，覆盖主要分支。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="视频课程" data-en="Video Courses">视频课程</span>
+                            <span class="translatable" data-zh="动画讲解" data-en="Animated Explanations">动画讲解</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=crashcourse" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="crashcourse"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.3">
+                    <div class="card-logo">
+                        <img src="https://nobaproject.com/assets/images/logo-9a5a39c5c1c0a5d9b7b4d6c2f6f9e2b1.png" alt="Noba Project Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Noba Project (入门文章)" data-en="Noba Project (Introductory Articles)">Noba Project (入门文章)</h3>
+                        <p class="translatable" data-zh="免费心理学入门模块文章，可替代教材使用。" data-en="Free introductory psychology module articles that can be used as textbook alternatives.">免费心理学入门模块文章，可替代教材使用。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="模块化内容" data-en="Modular Content">模块化内容</span>
+                            <span class="translatable" data-zh="开放资源" data-en="Open Resources">开放资源</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=noba" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="noba"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.3">
+                    <div class="card-logo">
+                        <img src="https://oli.cmu.edu/wp-content/uploads/2018/10/oli-logo-78x78.png" alt="OLI Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Open Learning Initiative - 心理学导论" data-en="Open Learning Initiative - Introduction to Psychology">Open Learning Initiative - 心理学导论</h3>
+                        <p class="translatable" data-zh="免费互动课程，含教材+练习。" data-en="Free interactive course with textbook and exercises.">免费互动课程，含教材+练习。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="互动课程" data-en="Interactive Course">互动课程</span>
+                            <span class="translatable" data-zh="自学资源" data-en="Self-learning Resource">自学资源</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=oli" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="oli"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.3">
+                    <div class="card-logo">
+                        <img src="https://plato.stanford.edu/symbols/sep-man.jpg" alt="SEP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Stanford Encyclopedia of Philosophy - 心理学相关" data-en="Stanford Encyclopedia of Philosophy - Psychology Related">Stanford Encyclopedia of Philosophy - 心理学相关</h3>
+                        <p class="translatable" data-zh="心理学与哲学交叉主题的权威条目。" data-en="Authoritative entries on topics at the intersection of psychology and philosophy.">心理学与哲学交叉主题的权威条目。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="学术资源" data-en="Academic Resource">学术资源</span>
+                            <span class="translatable" data-zh="交叉学科" data-en="Interdisciplinary">交叉学科</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=sep" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="sep"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.2">
+                    <div class="card-logo">
+                        <img src="logo/saylor.png" alt="Saylor Academy Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Saylor Academy - Psychology Textbooks" data-en="Saylor Academy - Psychology Textbooks">Saylor Academy - Psychology Textbooks</h3>
+                        <p class="translatable" data-zh="免费心理学课程与教材下载，涵盖心理学导论。" data-en="Free psychology courses and textbook downloads covering introduction to psychology.">免费心理学课程与教材下载，涵盖心理学导论。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="免费课程" data-en="Free Courses">免费课程</span>
+                            <span class="translatable" data-zh="心理学导论" data-en="Introduction to Psychology">心理学导论</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=saylor" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="saylor"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.2">
+                    <div class="card-logo">
+                        <img src="logo/apa.png" alt="APA Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="APA Free E-Books & Resources" data-en="APA Free E-Books & Resources">APA Free E-Books & Resources</h3>
+                        <p class="translatable" data-zh="美国心理学会出版，部分电子版可免费下载。" data-en="Published by the American Psychological Association, some electronic versions are available for free download.">美国心理学会出版，部分电子版可免费下载。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="专业资源" data-en="Professional Resources">专业资源</span>
+                            <span class="translatable" data-zh="部分免费" data-en="Partially Free">部分免费</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=apa" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="apa"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.2">
+                    <div class="card-logo">
+                        <img src="logo/BC.png" alt="BCcampus Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="BCcampus OpenEd - Psychology Textbooks" data-en="BCcampus OpenEd - Psychology Textbooks">BCcampus OpenEd - Psychology Textbooks</h3>
+                        <p class="translatable" data-zh="加拿大开放教材库，收录多本心理学电子书。" data-en="Canadian open textbook repository featuring multiple psychology e-books.">加拿大开放教材库，收录多本心理学电子书。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="开放教材" data-en="Open Textbooks">开放教材</span>
+                            <span class="translatable" data-zh="加拿大资源" data-en="Canadian Resources">加拿大资源</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=bccampus" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="bccampus"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.2">
+                    <div class="card-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Internet_Archive_logo_and_wordmark.svg/1200px-Internet_Archive_logo_and_wordmark.svg.png" alt="Internet Archive Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Internet Archive - Psychology Books" data-en="Internet Archive - Psychology Books">Internet Archive - Psychology Books</h3>
+                        <p class="translatable" data-zh="大量心理学教材与经典书籍的电子扫描本，可在线借阅或下载 PDF。" data-en="Electronic scans of numerous psychology textbooks and classic books, available for online borrowing or PDF download.">大量心理学教材与经典书籍的电子扫描本，可在线借阅或下载 PDF。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="电子扫描本" data-en="Electronic Scans">电子扫描本</span>
+                            <span class="translatable" data-zh="在线借阅" data-en="Online Borrowing">在线借阅</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=archive" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="archive"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.2">
+                    <div class="card-logo">
+                        <img src="https://www.gutenberg.org/gutenberg/pg-logo-129x80.png" alt="Project Gutenberg Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Project Gutenberg - 心理学经典著作" data-en="Project Gutenberg - Psychology Classics">Project Gutenberg - 心理学经典著作</h3>
+                        <p class="translatable" data-zh="免费提供已进入公共领域的心理学经典著作电子版。" data-en="Free electronic versions of classic psychology works that have entered the public domain.">免费提供已进入公共领域的心理学经典著作电子版。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="经典著作" data-en="Classic Works">经典著作</span>
+                            <span class="translatable" data-zh="公共领域" data-en="Public Domain">公共领域</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=gutenberg" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="gutenberg"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.1" data-subcategory="2.1.2">
+                    <div class="card-logo">
+                        <img src="https://www.merlot.org/merlot/images/merlot_logo.png" alt="MERLOT Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="MERLOT - 心理学教材资源" data-en="MERLOT - Psychology Teaching Resources">MERLOT - 心理学教材资源</h3>
+                        <p class="translatable" data-zh="高质量的心理学教学资源集合，包括开放教材和教学材料。" data-en="Collection of high-quality psychology teaching resources, including open textbooks and teaching materials.">高质量的心理学教学资源集合，包括开放教材和教学材料。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="教学资源" data-en="Teaching Resources">教学资源</span>
+                            <span class="translatable" data-zh="开放教材" data-en="Open Textbooks">开放教材</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=merlot" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="merlot"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.2.1 心理测验 - 第一行 -->
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.1">
+                    <div class="card-logo">
+                        <img src="logo/openpsychometrics.png" alt="OpenPsychometrics Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="OpenPsychometrics" data-en="OpenPsychometrics">OpenPsychometrics</h3>
+                        <p class="translatable" data-zh="免费心理测验平台，提供大五人格、MBTI、智力测验等。" data-en="Free psychological testing platform offering Big Five personality, MBTI, intelligence tests, etc.">免费心理测验平台，提供大五人格、MBTI、智力测验等。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="免费测验" data-en="Free Tests">免费测验</span>
+                            <span class="translatable" data-zh="人格测试" data-en="Personality Tests">人格测试</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=openpsychometrics" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="openpsychometrics"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.1">
+                    <div class="card-logo">
+                        <img src="logo/truity.png" alt="Truity Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Truity" data-en="Truity">Truity</h3>
+                        <p class="translatable" data-zh="国际知名测评平台，涵盖 MBTI、九型人格、大五等。" data-en="Internationally renowned assessment platform covering MBTI, Enneagram, Big Five, etc.">国际知名测评平台，涵盖 MBTI、九型人格、大五等。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="专业测评" data-en="Professional Assessment">专业测评</span>
+                            <span class="translatable" data-zh="多种类型" data-en="Multiple Types">多种类型</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=truity" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="truity"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.1">
+                    <div class="card-logo">
+                        <img src="logo/16personalities.png" alt="16Personalities Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="16Personalities" data-en="16Personalities">16Personalities</h3>
+                        <p class="translatable" data-zh="全球最流行的 MBTI 风格测评，界面友好。" data-en="World's most popular MBTI-style assessment with user-friendly interface.">全球最流行的 MBTI 风格测评，界面友好。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="MBTI测试" data-en="MBTI Test">MBTI测试</span>
+                            <span class="translatable" data-zh="用户友好" data-en="User Friendly">用户友好</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=16personalities" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="16personalities"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.2.1 心理测验 - 第二行 -->
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.1">
+                    <div class="card-logo">
+                        <img src="https://ipip.ori.org/images/ipip_logo.gif" alt="IPIP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Big Five Personality Test (IPIP-NEO)" data-en="Big Five Personality Test (IPIP-NEO)">Big Five Personality Test (IPIP-NEO)</h3>
+                        <p class="translatable" data-zh="大五人格量表（IPIP-NEO），研究与教育常用。" data-en="Big Five personality scale (IPIP-NEO), commonly used in research and education.">大五人格量表（IPIP-NEO），研究与教育常用。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="大五人格" data-en="Big Five">大五人格</span>
+                            <span class="translatable" data-zh="科研工具" data-en="Research Tool">科研工具</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=ipip" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="ipip"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.1">
+                    <div class="card-logo">
+                        <img src="https://www.psytest.cn/images/logo.png" alt="心理测评中心 Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="心理测评中心（中国科学院心理研究所）" data-en="Psychological Assessment Center (Institute of Psychology, CAS)">心理测评中心（中国科学院心理研究所）</h3>
+                        <p class="translatable" data-zh="中文心理测评资源平台，含智力、人格、情绪量表。" data-en="Chinese psychological assessment resource platform with intelligence, personality, and emotion scales.">中文心理测评资源平台，含智力、人格、情绪量表。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="中文测评" data-en="Chinese Assessment">中文测评</span>
+                            <span class="translatable" data-zh="权威机构" data-en="Authoritative Institution">权威机构</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=psytest" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="psytest"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.1">
+                    <div class="card-logo">
+                        <img src="https://www.queendom.com/images/queendom_logo.png" alt="Queendom Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Queendom Tests" data-en="Queendom Tests">Queendom Tests</h3>
+                        <p class="translatable" data-zh="大量心理学在线测验（IQ、EQ、人格、职业兴趣等）。" data-en="Extensive online psychological tests (IQ, EQ, personality, career interests, etc.).">大量心理学在线测验（IQ、EQ、人格、职业兴趣等）。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="多样测验" data-en="Diverse Tests">多样测验</span>
+                            <span class="translatable" data-zh="在线测试" data-en="Online Testing">在线测试</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=queendom" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="queendom"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.2.1 心理测验 - 第三行（单独一个） -->
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.1">
+                    <div class="card-logo">
+                        <img src="https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/field_blog_entry_images/2018-09/shutterstock_1156208652.jpg" alt="Psychology Today Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Psychology Today Tests" data-en="Psychology Today Tests">Psychology Today Tests</h3>
+                        <p class="translatable" data-zh="心理学主题测验：人格、情绪、恋爱、压力等。" data-en="Psychology-themed tests: personality, emotions, relationships, stress, etc.">心理学主题测验：人格、情绪、恋爱、压力等。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="主题测验" data-en="Themed Tests">主题测验</span>
+                            <span class="translatable" data-zh="生活应用" data-en="Life Application">生活应用</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=psychologytoday" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="psychologytoday"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.2.2 实验工具 - 第一行 -->
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.2">
+                    <div class="card-logo">
+                        <img src="https://www.psytoolkit.org/images/psytoolkit_logo.png" alt="PsyToolkit Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="PsyToolkit" data-en="PsyToolkit">PsyToolkit</h3>
+                        <p class="translatable" data-zh="免费在线心理实验与问卷工具，广泛用于科研与教学。" data-en="Free online psychological experiment and survey tool, widely used in research and teaching.">免费在线心理实验与问卷工具，广泛用于科研与教学。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="实验工具" data-en="Experiment Tool">实验工具</span>
+                            <span class="translatable" data-zh="免费使用" data-en="Free to Use">免费使用</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=psytoolkit" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="psytoolkit"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.2">
+                    <div class="card-logo">
+                        <img src="https://www.millisecond.com/images/inquisit_logo.png" alt="Inquisit Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Inquisit by Millisecond" data-en="Inquisit by Millisecond">Inquisit by Millisecond</h3>
+                        <p class="translatable" data-zh="专业心理实验软件，支持复杂反应时实验。" data-en="Professional psychological experiment software supporting complex reaction time experiments.">专业心理实验软件，支持复杂反应时实验。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="专业软件" data-en="Professional Software">专业软件</span>
+                            <span class="translatable" data-zh="反应时实验" data-en="Reaction Time Experiments">反应时实验</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=inquisit" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="inquisit"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.2">
+                    <div class="card-logo">
+                        <img src="https://www.psychopy.org/_static/psychopyDocBanner2.gif" alt="PsychoPy Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="PsychoPy" data-en="PsychoPy">PsychoPy</h3>
+                        <p class="translatable" data-zh="免费开源实验设计工具，广泛用于心理学与神经科学。" data-en="Free open-source experiment design tool, widely used in psychology and neuroscience.">免费开源实验设计工具，广泛用于心理学与神经科学。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="开源工具" data-en="Open Source">开源工具</span>
+                            <span class="translatable" data-zh="实验设计" data-en="Experiment Design">实验设计</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=psychopy" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="psychopy"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.2.2 实验工具 - 第二行 -->
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.2">
+                    <div class="card-logo">
+                        <img src="https://gorilla.sc/assets/img/gorilla-logo.png" alt="Gorilla Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Gorilla Experiment Builder" data-en="Gorilla Experiment Builder">Gorilla Experiment Builder</h3>
+                        <p class="translatable" data-zh="在线实验平台，支持行为实验和认知任务。" data-en="Online experiment platform supporting behavioral experiments and cognitive tasks.">在线实验平台，支持行为实验和认知任务。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="在线平台" data-en="Online Platform">在线平台</span>
+                            <span class="translatable" data-zh="认知任务" data-en="Cognitive Tasks">认知任务</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=gorilla" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="gorilla"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.2">
+                    <div class="card-logo">
+                        <img src="https://lab.js.org/img/logo.png" alt="Lab.js Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Lab.js" data-en="Lab.js">Lab.js</h3>
+                        <p class="translatable" data-zh="开源网页实验工具，可在浏览器运行心理实验。" data-en="Open-source web experiment tool that can run psychological experiments in browsers.">开源网页实验工具，可在浏览器运行心理实验。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="网页实验" data-en="Web Experiments">网页实验</span>
+                            <span class="translatable" data-zh="浏览器运行" data-en="Browser-based">浏览器运行</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=labjs" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="labjs"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.2">
+                    <div class="card-logo">
+                        <img src="https://www.expyriment.org/_static/expyriment_logo.png" alt="Expyriment Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Expyriment" data-en="Expyriment">Expyriment</h3>
+                        <p class="translatable" data-zh="Python 实验框架，适合行为科学研究。" data-en="Python experiment framework suitable for behavioral science research.">Python 实验框架，适合行为科学研究。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="Python框架" data-en="Python Framework">Python框架</span>
+                            <span class="translatable" data-zh="行为科学" data-en="Behavioral Science">行为科学</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=expyriment" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="expyriment"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.2.3 数据分析软件 - 第一行 -->
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.3">
+                    <div class="card-logo">
+                        <img src="https://www.ibm.com/content/dam/adobe-cms/instana/media_logo/SPSS_Logo.png" alt="SPSS Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="SPSS" data-en="SPSS">SPSS</h3>
+                        <p class="translatable" data-zh="最常用的心理学统计软件（商业版）。" data-en="Most commonly used statistical software in psychology (commercial version).">最常用的心理学统计软件（商业版）。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="统计软件" data-en="Statistical Software">统计软件</span>
+                            <span class="translatable" data-zh="行业标准" data-en="Industry Standard">行业标准</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=spss" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="spss"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.3">
+                    <div class="card-logo">
+                        <img src="https://www.r-project.org/logo/Rlogo.png" alt="R Project Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="R Project" data-en="R Project">R Project</h3>
+                        <p class="translatable" data-zh="免费开源统计语言，心理学科研常用。" data-en="Free open-source statistical language, commonly used in psychology research.">免费开源统计语言，心理学科研常用。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="开源免费" data-en="Open Source Free">开源免费</span>
+                            <span class="translatable" data-zh="统计语言" data-en="Statistical Language">统计语言</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=rproject" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="rproject"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.3">
+                    <div class="card-logo">
+                        <img src="https://jasp-stats.org/wp-content/themes/jasp/images/logo.svg" alt="JASP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="JASP" data-en="JASP">JASP</h3>
+                        <p class="translatable" data-zh="免费开源统计软件，专为心理学设计，界面类似 SPSS。" data-en="Free open-source statistical software designed for psychology, interface similar to SPSS.">免费开源统计软件，专为心理学设计，界面类似 SPSS。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="心理学专用" data-en="Psychology-specific">心理学专用</span>
+                            <span class="translatable" data-zh="免费软件" data-en="Free Software">免费软件</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=jasp" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="jasp"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.2.3 数据分析软件 - 第二行 -->
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.3">
+                    <div class="card-logo">
+                        <img src="https://www.jamovi.org/assets/header-logo.svg" alt="Jamovi Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Jamovi" data-en="Jamovi">Jamovi</h3>
+                        <p class="translatable" data-zh="开源统计平台，简洁易用，兼容 R。" data-en="Open-source statistical platform, simple and easy to use, compatible with R.">开源统计平台，简洁易用，兼容 R。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="简洁易用" data-en="Simple & Easy">简洁易用</span>
+                            <span class="translatable" data-zh="R兼容" data-en="R Compatible">R兼容</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=jamovi" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="jamovi"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.3">
+                    <div class="card-logo">
+                        <img src="https://www.psychologie.hhu.de/fileadmin/redaktion/Fakultaeten/Mathematisch-Naturwissenschaftliche_Fakultaet/Psychologie/AAP/gpower/GPowerIcon.png" alt="G*Power Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="G*Power" data-en="G*Power">G*Power</h3>
+                        <p class="translatable" data-zh="样本量计算软件，心理学科研常用。" data-en="Sample size calculation software, commonly used in psychology research.">样本量计算软件，心理学科研常用。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="样本量计算" data-en="Sample Size Calculation">样本量计算</span>
+                            <span class="translatable" data-zh="科研工具" data-en="Research Tool">科研工具</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=gpower" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="gpower"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.3">
+                    <div class="card-logo">
+                        <img src="https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/images/responsive/supporting/products/matlab/matlab-icon.svg" alt="MATLAB Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="MATLAB (Psychtoolbox)" data-en="MATLAB (Psychtoolbox)">MATLAB (Psychtoolbox)</h3>
+                        <p class="translatable" data-zh="MATLAB 插件，心理学与神经科学实验工具。" data-en="MATLAB plugin, experimental tool for psychology and neuroscience.">MATLAB 插件，心理学与神经科学实验工具。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="MATLAB插件" data-en="MATLAB Plugin">MATLAB插件</span>
+                            <span class="translatable" data-zh="神经科学" data-en="Neuroscience">神经科学</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=psychtoolbox" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="psychtoolbox"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.2.3 数据分析软件 - 第三行（单独一个） -->
+                <div class="resource-card" data-category="2.2" data-subcategory="2.2.3">
+                    <div class="card-logo">
+                        <img src="https://www.zotero.org/static/images/theme/zotero-logo.svg" alt="Zotero Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Zotero" data-en="Zotero">Zotero</h3>
+                        <p class="translatable" data-zh="免费文献管理软件，科研必备。" data-en="Free reference management software, essential for research.">免费文献管理软件，科研必备。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="文献管理" data-en="Reference Management">文献管理</span>
+                            <span class="translatable" data-zh="科研必备" data-en="Research Essential">科研必备</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=zotero" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="zotero"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.3 心理学分支 -->
+                <!-- 2.3.1 认知心理学 -->
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.1">
+                    <div class="card-logo">
+                        <img src="https://cognitivesciencesociety.org/wp-content/uploads/2019/01/cogsci-logo.png" alt="Cognitive Science Society Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Cognitive Science Society" data-en="Cognitive Science Society">Cognitive Science Society</h3>
+                        <p class="translatable" data-zh="国际认知科学协会，跨学科研究。" data-en="International cognitive science association for interdisciplinary research.">国际认知科学协会，跨学科研究。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="认知科学" data-en="Cognitive Science">认知科学</span>
+                            <span class="translatable" data-zh="跨学科" data-en="Interdisciplinary">跨学科</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=cogsci" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="cogsci"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.1">
+                    <div class="card-logo">
+                        <img src="https://www.psychonomic.org/images/psychonomic-logo.png" alt="Psychonomic Society Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Psychonomic Society" data-en="Psychonomic Society">Psychonomic Society</h3>
+                        <p class="translatable" data-zh="认知与实验心理学顶级学会。" data-en="Premier society for cognitive and experimental psychology.">认知与实验心理学顶级学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="实验心理学" data-en="Experimental Psychology">实验心理学</span>
+                            <span class="translatable" data-zh="顶级学会" data-en="Premier Society">顶级学会</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=psychonomic" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="psychonomic"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.1">
+                    <div class="card-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/1280px-MIT_logo.svg.png" alt="MIT BCS Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="MIT Department of Brain & Cognitive Sciences" data-en="MIT Department of Brain & Cognitive Sciences">MIT Department of Brain & Cognitive Sciences</h3>
+                        <p class="translatable" data-zh="MIT 认知与脑科学研究中心。" data-en="MIT research center for cognitive and brain sciences.">MIT 认知与脑科学研究中心。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="脑科学" data-en="Brain Science">脑科学</span>
+                            <span class="translatable" data-zh="研究中心" data-en="Research Center">研究中心</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=mitbcs" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="mitbcs"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.3.2 发展心理学 -->
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.2">
+                    <div class="card-logo">
+                        <img src="https://www.srcd.org/sites/default/files/SRCD_logo_2019.png" alt="SRCD Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Society for Research in Child Development (SRCD)" data-en="Society for Research in Child Development (SRCD)">Society for Research in Child Development (SRCD)</h3>
+                        <p class="translatable" data-zh="儿童发展研究国际学会。" data-en="International society for child development research.">儿童发展研究国际学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="儿童发展" data-en="Child Development">儿童发展</span>
+                            <span class="translatable" data-zh="国际学会" data-en="International Society">国际学会</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=srcd" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="srcd"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.2">
+                    <div class="card-logo">
+                        <img src="https://www.apa.org/images/apa-logo.svg" alt="APA Division 7 Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="APA Division 7: Developmental Psychology" data-en="APA Division 7: Developmental Psychology">APA Division 7: Developmental Psychology</h3>
+                        <p class="translatable" data-zh="发展心理学专业分部。" data-en="Professional division for developmental psychology.">发展心理学专业分部。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="专业分部" data-en="Professional Division">专业分部</span>
+                            <span class="translatable" data-zh="发展心理学" data-en="Developmental Psychology">发展心理学</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=apadiv7" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="apadiv7"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.2">
+                    <div class="card-logo">
+                        <img src="https://www.zerotothree.org/wp-content/uploads/2019/04/ZTT-logo-horizontal.png" alt="Zero to Three Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Zero to Three" data-en="Zero to Three">Zero to Three</h3>
+                        <p class="translatable" data-zh="婴幼儿发展研究与干预。" data-en="Infant and toddler development research and intervention.">婴幼儿发展研究与干预。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="婴幼儿发展" data-en="Infant Development">婴幼儿发展</span>
+                            <span class="translatable" data-zh="早期干预" data-en="Early Intervention">早期干预</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=zerotothree" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="zerotothree"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.3.3 临床与咨询心理学 -->
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.3">
+                    <div class="card-logo">
+                        <img src="https://www.apa.org/images/apa-logo.svg" alt="APA Division 12 Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="APA Division 12: Society of Clinical Psychology" data-en="APA Division 12: Society of Clinical Psychology">APA Division 12: Society of Clinical Psychology</h3>
+                        <p class="translatable" data-zh="临床心理学学会。" data-en="Society of Clinical Psychology.">临床心理学学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="临床心理学" data-en="Clinical Psychology">临床心理学</span>
+                            <span class="translatable" data-zh="专业学会" data-en="Professional Society">专业学会</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=apadiv12" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="apadiv12"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.3">
+                    <div class="card-logo">
+                        <img src="https://www.apa.org/images/apa-logo.svg" alt="APA Division 17 Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="APA Division 17: Society of Counseling Psychology" data-en="APA Division 17: Society of Counseling Psychology">APA Division 17: Society of Counseling Psychology</h3>
+                        <p class="translatable" data-zh="咨询心理学学会。" data-en="Society of Counseling Psychology.">咨询心理学学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="咨询心理学" data-en="Counseling Psychology">咨询心理学</span>
+                            <span class="translatable" data-zh="专业学会" data-en="Professional Society">专业学会</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=apadiv17" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="apadiv17"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.3">
+                    <div class="card-logo">
+                        <img src="https://www.psychotherapyresearch.org/images/SPR_logo.png" alt="SPR Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Society for Psychotherapy Research (SPR)" data-en="Society for Psychotherapy Research (SPR)">Society for Psychotherapy Research (SPR)</h3>
+                        <p class="translatable" data-zh="心理治疗研究学会。" data-en="Society for psychotherapy research.">心理治疗研究学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="心理治疗" data-en="Psychotherapy">心理治疗</span>
+                            <span class="translatable" data-zh="研究学会" data-en="Research Society">研究学会</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=spr" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="spr"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.3.4 社会心理学 -->
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.4">
+                    <div class="card-logo">
+                        <img src="https://www.spsp.org/sites/default/files/SPSP_logo_horizontal.png" alt="SPSP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Society for Personality and Social Psychology (SPSP)" data-en="Society for Personality and Social Psychology (SPSP)">Society for Personality and Social Psychology (SPSP)</h3>
+                        <p class="translatable" data-zh="全球最大的人格与社会心理学组织。" data-en="World's largest organization for personality and social psychology.">全球最大的人格与社会心理学组织。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="社会心理学" data-en="Social Psychology">社会心理学</span>
+                            <span class="translatable" data-zh="人格心理学" data-en="Personality Psychology">人格心理学</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=spsp" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="spsp"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.4">
+                    <div class="card-logo">
+                        <img src="https://www.easp.eu/images/easp-logo.png" alt="EASP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="European Association of Social Psychology (EASP)" data-en="European Association of Social Psychology (EASP)">European Association of Social Psychology (EASP)</h3>
+                        <p class="translatable" data-zh="欧洲社会心理学学会。" data-en="European Association of Social Psychology.">欧洲社会心理学学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="欧洲学会" data-en="European Association">欧洲学会</span>
+                            <span class="translatable" data-zh="社会心理学" data-en="Social Psychology">社会心理学</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=easp" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="easp"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.4">
+                    <div class="card-logo">
+                        <img src="https://www.relationshipresearch.org/images/iarr-logo.png" alt="IARR Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="International Association for Relationship Research (IARR)" data-en="International Association for Relationship Research (IARR)">International Association for Relationship Research (IARR)</h3>
+                        <p class="translatable" data-zh="关系与社会互动研究学会。" data-en="Association for relationship and social interaction research.">关系与社会互动研究学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="关系研究" data-en="Relationship Research">关系研究</span>
+                            <span class="translatable" data-zh="社会互动" data-en="Social Interaction">社会互动</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=iarr" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="iarr"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.3.5 教育心理学 -->
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.5">
+                    <div class="card-logo">
+                        <img src="https://www.aera.net/portals/38/images/AERA_Logo_Horizontal.png" alt="AERA Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="American Educational Research Association (AERA)" data-en="American Educational Research Association (AERA)">American Educational Research Association (AERA)</h3>
+                        <p class="translatable" data-zh="教育与心理学研究核心组织。" data-en="Core organization for educational and psychological research.">教育与心理学研究核心组织。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="教育研究" data-en="Educational Research">教育研究</span>
+                            <span class="translatable" data-zh="核心组织" data-en="Core Organization">核心组织</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=aera" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="aera"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.5">
+                    <div class="card-logo">
+                        <img src="https://www.apa.org/images/apa-logo.svg" alt="APA Division 15 Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="APA Division 15: Educational Psychology" data-en="APA Division 15: Educational Psychology">APA Division 15: Educational Psychology</h3>
+                        <p class="translatable" data-zh="教育心理学学会。" data-en="Educational Psychology Society.">教育心理学学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="教育心理学" data-en="Educational Psychology">教育心理学</span>
+                            <span class="translatable" data-zh="专业学会" data-en="Professional Society">专业学会</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=apadiv15" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="apadiv15"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.5">
+                    <div class="card-logo">
+                        <img src="https://www.earli.org/sites/default/files/earli-logo.png" alt="EARLI Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="European Association for Research on Learning and Instruction (EARLI)" data-en="European Association for Research on Learning and Instruction (EARLI)">European Association for Research on Learning and Instruction (EARLI)</h3>
+                        <p class="translatable" data-zh="欧洲教育心理学与学习科学协会。" data-en="European association for educational psychology and learning sciences.">欧洲教育心理学与学习科学协会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="学习科学" data-en="Learning Sciences">学习科学</span>
+                            <span class="translatable" data-zh="欧洲协会" data-en="European Association">欧洲协会</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=earli" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="earli"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2.3.6 神经科学与脑科学 -->
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.6">
+                    <div class="card-logo">
+                        <img src="https://www.sfn.org/-/media/SfN/Images/SfN-Logo.ashx" alt="SfN Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Society for Neuroscience (SfN)" data-en="Society for Neuroscience (SfN)">Society for Neuroscience (SfN)</h3>
+                        <p class="translatable" data-zh="全球最大神经科学学会。" data-en="World's largest neuroscience society.">全球最大神经科学学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="神经科学" data-en="Neuroscience">神经科学</span>
+                            <span class="translatable" data-zh="全球最大" data-en="World's Largest">全球最大</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=sfn" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="sfn"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.6">
+                    <div class="card-logo">
+                        <img src="https://www.cogneurosociety.org/wp-content/uploads/2019/01/CNS-logo.png" alt="CNS Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Cognitive Neuroscience Society (CNS)" data-en="Cognitive Neuroscience Society (CNS)">Cognitive Neuroscience Society (CNS)</h3>
+                        <p class="translatable" data-zh="认知神经科学领域顶级组织。" data-en="Premier organization in cognitive neuroscience.">认知神经科学领域顶级组织。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="认知神经科学" data-en="Cognitive Neuroscience">认知神经科学</span>
+                            <span class="translatable" data-zh="顶级组织" data-en="Premier Organization">顶级组织</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=cns" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="cns"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.6">
+                    <div class="card-logo">
+                        <img src="https://www.humanbrainproject.eu/images/hbp-logo.png" alt="HBP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Human Brain Project (HBP)" data-en="Human Brain Project (HBP)">Human Brain Project (HBP)</h3>
+                        <p class="translatable" data-zh="欧盟脑科学研究旗舰项目。" data-en="EU flagship brain science research project.">欧盟脑科学研究旗舰项目。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="脑科学" data-en="Brain Science">脑科学</span>
+                            <span class="translatable" data-zh="旗舰项目" data-en="Flagship Project">旗舰项目</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=hbp" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="hbp"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.6">
+                    <div class="card-logo">
+                        <img src="https://portal.brain-map.org/assets/images/logo-allen-brain-atlas.png" alt="Allen Brain Atlas Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Allen Brain Atlas" data-en="Allen Brain Atlas">Allen Brain Atlas</h3>
+                        <p class="translatable" data-zh="开放神经科学数据库。" data-en="Open neuroscience database.">开放神经科学数据库。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="神经科学" data-en="Neuroscience">神经科学</span>
+                            <span class="translatable" data-zh="数据库" data-en="Database">数据库</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=allenbrain" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="allenbrain"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.6">
+                    <div class="card-logo">
+                        <img src="https://neuinfo.org/images/nif-logo.png" alt="NIF Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="NeuroScience Information Framework (NIF)" data-en="NeuroScience Information Framework (NIF)">NeuroScience Information Framework (NIF)</h3>
+                        <p class="translatable" data-zh="神经科学资源与数据库整合平台。" data-en="Integration platform for neuroscience resources and databases.">神经科学资源与数据库整合平台。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="神经科学" data-en="Neuroscience">神经科学</span>
+                            <span class="translatable" data-zh="整合平台" data-en="Integration Platform">整合平台</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=nif" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="nif"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.6">
+                    <div class="card-logo">
+                        <img src="https://media.springernature.com/full/nature-cms/uploads/product/nature/header-86f1263ea01eccd46b530284be10585e.svg" alt="Nature Neuroscience Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Nature Neuroscience" data-en="Nature Neuroscience">Nature Neuroscience</h3>
+                        <p class="translatable" data-zh="国际顶尖神经科学期刊。" data-en="International top-tier neuroscience journal.">国际顶尖神经科学期刊。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="神经科学" data-en="Neuroscience">神经科学</span>
+                            <span class="translatable" data-zh="顶级期刊" data-en="Top Journal">顶级期刊</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=natureneuro" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="natureneuro"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.4">
+                    <div class="card-logo">
+                        <img src="https://www.sesp.org/images/sesp-logo.png" alt="SESP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Society of Experimental Social Psychology (SESP)" data-en="Society of Experimental Social Psychology (SESP)">Society of Experimental Social Psychology (SESP)</h3>
+                        <p class="translatable" data-zh="实验社会心理学学会。" data-en="Society of Experimental Social Psychology.">实验社会心理学学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="实验社会心理学" data-en="Experimental Social Psychology">实验社会心理学</span>
+                            <span class="translatable" data-zh="学术学会" data-en="Academic Society">学术学会</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=sesp" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="sesp"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.4">
+                    <div class="card-logo">
+                        <img src="https://www.apa.org/images/journal-psp_tcm7-196941_w1024_n.jpg" alt="JPSP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Journal of Personality and Social Psychology (APA)" data-en="Journal of Personality and Social Psychology (APA)">Journal of Personality and Social Psychology (APA)</h3>
+                        <p class="translatable" data-zh="社会心理学领域最具影响力的期刊之一。" data-en="One of the most influential journals in social psychology.">社会心理学领域最具影响力的期刊之一。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="社会心理学" data-en="Social Psychology">社会心理学</span>
+                            <span class="translatable" data-zh="顶级期刊" data-en="Top Journal">顶级期刊</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=jpsp" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="jpsp"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.3">
+                    <div class="card-logo">
+                        <img src="https://www.istss.org/ISTSS_Main/media/ISTSS-Brand-Assets/ISTSS-Logo.png" alt="ISTSS Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="International Society for Traumatic Stress Studies (ISTSS)" data-en="International Society for Traumatic Stress Studies (ISTSS)">International Society for Traumatic Stress Studies (ISTSS)</h3>
+                        <p class="translatable" data-zh="创伤与 PTSD 国际学会。" data-en="International society for trauma and PTSD.">创伤与 PTSD 国际学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="创伤心理学" data-en="Trauma Psychology">创伤心理学</span>
+                            <span class="translatable" data-zh="PTSD" data-en="PTSD">PTSD</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=istss" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="istss"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.3">
+                    <div class="card-logo">
+                        <img src="https://www.apa.org/images/journal-ccp_tcm7-196939_w1024_n.jpg" alt="JCCP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Journal of Consulting and Clinical Psychology (APA)" data-en="Journal of Consulting and Clinical Psychology (APA)">Journal of Consulting and Clinical Psychology (APA)</h3>
+                        <p class="translatable" data-zh="临床与咨询心理学顶刊。" data-en="Top journal in clinical and consulting psychology.">临床与咨询心理学顶刊。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="临床心理学" data-en="Clinical Psychology">临床心理学</span>
+                            <span class="translatable" data-zh="顶级期刊" data-en="Top Journal">顶级期刊</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=jccp" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="jccp"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.2">
+                    <div class="card-logo">
+                        <img src="https://www.issbd.org/images/issbd-logo.png" alt="ISSBD Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="International Society for the Study of Behavioural Development (ISSBD)" data-en="International Society for the Study of Behavioural Development (ISSBD)">International Society for the Study of Behavioural Development (ISSBD)</h3>
+                        <p class="translatable" data-zh="全球发展心理学研究者组织。" data-en="Global organization for developmental psychology researchers.">全球发展心理学研究者组织。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="发展心理学" data-en="Developmental Psychology">发展心理学</span>
+                            <span class="translatable" data-zh="国际组织" data-en="International Organization">国际组织</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=issbd" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="issbd"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.2">
+                    <div class="card-logo">
+                        <img src="https://onlinelibrary.wiley.com/pb-assets/journal-banners/15327078-1501538962270.jpg" alt="Child Development Journal Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Child Development Journal" data-en="Child Development Journal">Child Development Journal</h3>
+                        <p class="translatable" data-zh="发展心理学顶级期刊。" data-en="Top journal in developmental psychology.">发展心理学顶级期刊。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="发展心理学" data-en="Developmental Psychology">发展心理学</span>
+                            <span class="translatable" data-zh="顶级期刊" data-en="Top Journal">顶级期刊</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=childdev" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="childdev"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.1">
+                    <div class="card-logo">
+                        <img src="https://www.mpg.de/assets/mpg_logo-1a42a8c4c0e5b2c2c8b9a9e3a7a0e1a7c8a9a8c4c0e5b2c2c8b9a9e3a7a0e1a7.svg" alt="Max Planck Institute Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Max Planck Institute for Human Cognitive and Brain Sciences" data-en="Max Planck Institute for Human Cognitive and Brain Sciences">Max Planck Institute for Human Cognitive and Brain Sciences</h3>
+                        <p class="translatable" data-zh="德国马普学会，认知神经科学权威研究机构。" data-en="German Max Planck Society, authoritative research institution for cognitive neuroscience.">德国马普学会，认知神经科学权威研究机构。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="认知神经科学" data-en="Cognitive Neuroscience">认知神经科学</span>
+                            <span class="translatable" data-zh="研究机构" data-en="Research Institution">研究机构</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=maxplanck" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="maxplanck"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.1">
+                    <div class="card-logo">
+                        <img src="https://www.apa.org/images/journal-xge_tcm7-196940_w1024_n.jpg" alt="JEP Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Journal of Experimental Psychology (APA)" data-en="Journal of Experimental Psychology (APA)">Journal of Experimental Psychology (APA)</h3>
+                        <p class="translatable" data-zh="实验与认知心理学核心期刊。" data-en="Core journal for experimental and cognitive psychology.">实验与认知心理学核心期刊。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="实验心理学" data-en="Experimental Psychology">实验心理学</span>
+                            <span class="translatable" data-zh="核心期刊" data-en="Core Journal">核心期刊</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=jep" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="jep"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.5">
+                    <div class="card-logo">
+                        <img src="https://www.isls.org/images/isls-logo.png" alt="ISLS Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="International Society of the Learning Sciences (ISLS)" data-en="International Society of the Learning Sciences (ISLS)">International Society of the Learning Sciences (ISLS)</h3>
+                        <p class="translatable" data-zh="学习科学与教育心理学国际学会。" data-en="International society for learning sciences and educational psychology.">学习科学与教育心理学国际学会。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="学习科学" data-en="Learning Sciences">学习科学</span>
+                            <span class="translatable" data-zh="教育心理学" data-en="Educational Psychology">教育心理学</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=isls" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="isls"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-card" data-category="2.3" data-subcategory="2.3.5">
+                    <div class="card-logo">
+                        <img src="https://www.tandfonline.com/action/showCoverImage?journalCode=hedp20" alt="Educational Psychologist Journal Logo">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="translatable" data-zh="Educational Psychologist Journal" data-en="Educational Psychologist Journal">Educational Psychologist Journal</h3>
+                        <p class="translatable" data-zh="教育心理学顶级期刊。" data-en="Top journal in educational psychology.">教育心理学顶级期刊。</p>
+                        <div class="card-tags">
+                            <span class="translatable" data-zh="教育心理学" data-en="Educational Psychology">教育心理学</span>
+                            <span class="translatable" data-zh="顶级期刊" data-en="Top Journal">顶级期刊</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="detail.html?id=edpsych" class="details-btn translatable" data-en="View Details" data-zh="查看详情">View Details</a>
+                            <button class="favorite-btn" data-id="edpsych"><i class="far fa-star"></i> <span class="translatable" data-zh="收藏" data-en="Favorite">Favorite</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 yfpsynav - 心理学导航. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- <div class="resource-card">
+    <div class="resource-logo">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/media/coursera-logo-square.png" alt="Coursera Logo" onerror="this.src='placeholder.png'">
+    </div>
+    <div class="resource-content">
+        <h3 class="translatable">Coursera</h3>
+        <p class="translatable">A leading online learning platform offering courses from top universities and companies worldwide.</p>
+        <div class="resource-tags">
+            <span class="translatable">Online Courses</span>
+            <span class="translatable">Certificates</span>
+            <span class="translatable">University Partners</span>
+        </div>
+        <div class="resource-actions">
+            <a href="detail.html?id=coursera" class="btn-details translatable">View Details</a>
+        </div>
+    </div>
+</div>
+<div class="resource-card">
+    <div class="resource-logo">
+        <img src="https://www.edx.org/images/logos/edx-logo-elm.svg" alt="edX Logo" onerror="this.src='placeholder.png'">
+    </div>
+    <div class="resource-content">
+        <h3 class="translatable">edX</h3>
+        <p class="translatable">Online learning platform founded by Harvard and MIT offering courses from leading educational institutions.</p>
+        <div class="resource-tags">
+            <span class="translatable">Online Courses</span>
+            <span class="translatable">MicroMasters</span>
+            <span class="translatable">Professional Certificates</span>
+        </div>
+        <div class="resource-actions">
+            <a href="detail.html?id=edx" class="btn-details translatable">View Details</a>
+        </div>
+    </div>
+</div>
+<div class="resource-card">
+    <div class="resource-logo">
+        <img src="https://ocw.mit.edu/images/mit_logo.png" alt="MIT OpenCourseWare Logo" onerror="this.src='placeholder.png'">
+    </div>
+    <div class="resource-content">
+        <h3 class="translatable">MIT OpenCourseWare</h3>
+        <p class="translatable">Free web-based publication of virtually all MIT course content, open and available to the world.</p>
+        <div class="resource-tags">
+            <span class="translatable">Free Courses</span>
+            <span class="translatable">University Content</span>
+            <span class="translatable">Self-paced Learning</span>
+        </div>
+        <div class="resource-actions">
+            <a href="detail.html?id=mit" class="btn-details translatable">View Details</a>
+        </div>
+    </div>
+</div> -->
